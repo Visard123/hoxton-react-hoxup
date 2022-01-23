@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function MainApp() {
   const [conversation, setConversation] = useState([]);
 
   const params = useParams();
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (params.conversationId) {
     }

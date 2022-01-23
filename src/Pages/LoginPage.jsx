@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-function LoginPage() {
+function LoginPage(setModal) {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -49,7 +49,10 @@ function LoginPage() {
           ))}
 
           <li>
-            <button className="user-selection">
+            <button
+              className="user-selection"
+              onClick={() => setModal("new-user")}
+            >
               <h3>+ Add a new user</h3>
             </button>
           </li>
